@@ -1,2 +1,4 @@
-# csd-340
-This repository is to hold assignments for class CSD340.
+# CSD 340 Web Development with HTML and CSS
+## Contributors
+* Rebecca Essenburg
+* Adam Bailey

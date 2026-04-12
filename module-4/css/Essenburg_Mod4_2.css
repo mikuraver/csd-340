@@ -1,0 +1,46 @@
+/* Rebecca Essenburg
+CSD 340
+Assignment 4.2
+4/12/26 */
+
+#image-gallery {
+display: grid;
+grid-template-columns: auto auto auto;
+margin-top: 10%;
+}
+
+#image-gallery div {
+border: 2px solid rgb(100 0 255 / 35%);
+}
+
+h1 {
+text-align: center;
+}
+
+h3 {
+text-align: center;
+color: rgb(75 0 130);
+}
+
+figure {
+text-align: center;
+}
+
+figcaption {
+font-style: italic;
+font-size: .75em;
+color: rgb(138 43 226);
+}
+
+img {
+width: 200px;
+height: auto;
+}
+
+.return {
+width: 100%;
+margin-top: 25%;
+margin-bottom: 20px;
+float: right;
+vertical-align: top;
+}

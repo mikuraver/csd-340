@@ -1,0 +1,85 @@
+/* Rebecca Essenburg
+CSD 340
+Assignment 5.2
+4/12/26 */
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Kiwi+Maru&family=Modak&family=Schoolbell&display=swap');
+
+html {
+font-size: 62.5%
+}
+
+body {
+font-size: 1.6rem;
+background-color: #FFAAA6;
+background-image: linear-gradient(to bottom, #FFAAA6, #DCEDC2);
+background-attachment: fixed;
+background-size: cover;
+min-height: 100vh;
+margin: 0;
+}
+
+#container {
+display: grid;
+grid-template-columns: auto 1fr;
+margin-top: 50px;
+margin-left: 100px;
+margin-right: 100px;
+}
+
+#menu {
+display: grid;
+grid-template-columns: auto;
+justify-items: left;
+}
+
+#main-content {
+text-align: center;
+}
+
+h1 {
+font-family: "Modak", system-ui;
+font-size: 5rem;
+font-weight: 100;
+font-style: normal;
+text-shadow: 2px 2px grey;
+color: #A8E6CE;
+text-align: center;
+}
+
+h2 {
+font-family: "Chewy", system-ui;
+font-size: 4rem;
+font-weight: 200;
+font-style: normal;
+text-shadow: 2px 2px grey;
+color: #DCEDC2;
+}
+
+h3 {
+font-family: "Schoolbell", cursive;
+font-size: 3rem;
+font-weight: 600;
+font-style: normal;
+text-shadow: 2px 2px grey;
+color: #FF8C94;
+}
+
+p {
+font-family: "Kiwi Maru", serif;
+font-size: 2rem;
+font-weight: 300;
+font-style: normal;
+text-shadow: 1px 1px grey;
+color: #FFFFFF;
+}
+
+#icon {
+height: 200px;
+width: 200px;
+}
+
+button {
+background: none;
+border: none;
+}

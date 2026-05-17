@@ -10,25 +10,54 @@ Assignment 10.3
     <title>
       CSD 340 Web Development with HTML and CSS
     </title>
-
-<!-- JAVASCRIPT -->
-    <script>
-    </script>
   </head>
 
   <body>
     <h1>Assignment 10.3: JavaScript - Part 2</h1>
-    <br />
-
-<!-- MOUSE OVER IMAGE -->
-    <div>
-    </div>
 
     <br />
 
-<!-- ON CLICK IMAGE -->
-    <div>
+    <div style="display: grid; grid-template-columns: auto auto;">
+    <figure>
+      <img id="mouseEx" src="originalMouse.png" alt="smiling girl" width="500" height="500">
+      <figcaption class="caption" style="font-size: 24px;">Hover Over the Image to Change It!</figcaption>
+    </figure>
+
+    <figure>
+      <img id="clickEx" src="originalClick.png" alt="waving bat eating noodles" width="500" height="500">
+      <figcaption class="caption" style="font-size: 24px;">Click On the Image to Change it!</figcaption>
+    </figure>
     </div>
+
+<!-- JAVASCRIPT -->
+    <script>
+      const mouseImg = document.getElementById("mouseEx");
+      mouseImg.addEventListener("mouseover", function() {
+        mouseImg.src="newMouse.png";
+      });
+      mouseImg.addEventListener("mouseout", function() {
+        mouseImg.src="originalMouse.png";
+      });
+        
+      const clickImg = document.getElementById("clickEx");
+      clickImg.addEventListener("click", function() {
+        if (clickImg.getAttribute('src') == "originalClick.png") {
+          clickImg.src = "newClick.png";
+        } else {
+          clickImg.src = "originalClick.png";
+        }
+      });
+
+      const text=document.querySelectorAll(".caption");
+      text.forEach(element => {
+        element.addEventListener("mouseenter", function() {
+          element.style.color = "pink";
+        });
+        element.addEventListener("mouseleave", function() {
+          element.style.color = "black";
+        });
+      });
+    </script>
   </body>
 
 </html>

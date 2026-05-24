@@ -1,0 +1,85 @@
+<!-- Rebecca Essenburg
+CSD 340
+Assignment 11.2
+5/24/26 -->
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Essenburg_Mod11_2.css">
+  </head>
+
+  <body>
+    <header>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <main>
+      <h2>To-Do List</h2>
+      Enter a task below.<br>
+      Click 'Add' to save it.<br>
+      Click 'Delete' to delete the last entry.<br>
+      Click 'Sort' to sort the list alphabetically.<br><br>
+      <input type="text" id="input" placeholder="Enter a task...">
+      <button id="add">Add</button>
+      <button id="delete">Delete Last Entry</button>
+      <button id="sort">Sort</button>
+      <br>
+      <h2>Things to Do:</h2>
+      <ul id="container"></ul>
+    </main>
+
+<!--JAVASCRIPT-->
+    <script>
+      let taskArray = [];
+      const input = document.getElementById("input");
+      const addBtn = document.getElementById("add");
+      const delBtn = document.getElementById("delete");
+      const sortBtn = document.getElementById("sort");
+      const container = document.getElementById("container");
+
+      function addTask() {
+        const task = input.value;
+        if (task.trim() !== "") {
+          taskArray.push(task.trim());
+          alert("'" + task + "' has been added!");
+          input.value = "";
+          displayList();
+        }
+        else {
+          alert("Please enter a task!");
+        }
+      }
+
+      function deleteTask() {
+        if (taskArray.length > 0) {
+          const removedTask = taskArray.pop();
+          alert("'" + removedTask + "' has been deleted!");
+          displayList();
+        }
+        else {
+          alert("No tasks left to delete!");
+        }
+      }
+
+      function displayList() {
+        container.innerHTML = taskArray.map(task => `<li>${task}</li>`).join("");
+      }
+
+      function sortList() {
+        taskArray.sort();
+        displayList();
+      }
+
+      addBtn.addEventListener("click", addTask);
+      delBtn.addEventListener("click", deleteTask);
+      sortBtn.addEventListener("click", sortList);
+      
+      displayList();
+    </script>
+  </body>
+
+</html>
